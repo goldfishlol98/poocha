@@ -145,6 +145,33 @@
         .text-right {
             text-align: right;
         }
+        @media screen and (max-width: 600px){
+            .card {
+            color: #013243;
+            /*SHERPA BLUE*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 350px;
+            background: #e0e1dc;
+            transform-style: preserve-3d;
+            transform: translate(-50%, -50%) perspective(2000px);
+            box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
+            20px 0 60px rgba(0, 0, 0, 0.5);
+            transition: 1s;
+        }
+        .card .details p {
+            font-size: 11px;
+            line-height: 3px;
+            transform: rotate(-10deg);
+            padding: 0 0 0 20px;
+        }
+        .card .imgBox img {
+            min-width: 150px;
+            max-height: 400px;
+        }
+        }
     </style>
 </head>
 
