@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>bdayy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    body  {
+    background-image: url("src/images/Star-Transparent-PNG.png");
+  background-color:#111;
+}
+.mySlides {display:none;}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:transparent;
+  color: white;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="memo.html">Memories</a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a href=" "></a></li>
+        <li><a class="active" href="timeline.html">Timeline</a></li>
+        <li style="float:right"><a class="active" href="card.html">Your card</a></li>
+      </ul>
+<div class="w3-content w3-section" style="max-width:500px",style="max-height:50px;">
+  <img class="mySlides" src="src/images/bs.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/1.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/2.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/3.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/4.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/5.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/6.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/7.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/8.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/9.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/10.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/11.jpeg" style="width:100%">
+  <img class="mySlides" src="src/images/12.jpeg" style="width:100%">
+</div>
+<div class="footer">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<audio controls autoplay>
+    <source src="h.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>

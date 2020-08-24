@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>09/2018</h2>
+      <img src="src/images/a.jpeg" alt="" style="width:70%"/>
+      <p>Wishing you health, love, wealth, happiness and just everything your heart desires. Happy Birthday.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>10/2018</h2>
+      <img src="src/images/b.jpeg" alt="" style="width:70%"/>
+      <p>Happy Birthday Dear … Hope your Birthday blossoms into lots of dreams come true.</p>    
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>11/2018</h2>
+      <img src="src/images/c.jpeg" alt="" style="width:70%"/>
+      <p>The sun is shining more brightly today as a way to wish you happy birthday.</p>    
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>12/2018</h2>
+      <img src="src/images/d.jpeg" alt="" style="width:70%"/>
+      <p>On your birthday, I wish you to have a hundred of birthdays more! Congratulations!</p>    
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>01/2019</h2>
+      <img src="src/images/e.jpeg" alt="" style="width:70%"/>
+      <p>I congratulate you on your birthday and wish you a very special and fateful year ahead.</p>    
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>02/2009</h2>
+      <img src="src/images/f.jpeg" alt="" style="width:70%"/>
+      <p>It’s your birthday! I hope it is filled with happiness and plenty of love.</p>    
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>03/2019</h2>
+      <img src="src/images/g.jpeg" alt="" style="width:70%"/>
+      <p>I hope your day is full of fun and celebration. Happy birthday to you my dear!</p>    
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>04/2019</h2>
+      <img src="src/images/h.jpeg" alt="" style="width:70%"/>
+      <p>Happy birthday beautiful! I hope you have a wonderful day filled with joy and happiness.</p>    
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>05/2019</h2>
+      <img src="src/images/ii.jpeg" alt="" style="width:70%"/>
+      <p>May your life be always filled with laughter, loud music and sweet cakes, just as today! Happy birthday!</p>    
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>06/2019</h2>
+      <img src="src/images/j.jpeg" alt="" style="width:70%"/>
+      <p>Have a wonderful happy, healthy birthday and many more to come. Happy Birthday ?</p>    
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>07/2019</h2>
+      <img src="src/images/k.jpeg" alt="" style="width:70%"/>
+      <p>Happy birthday sweetie may all your dreams come true, and on this day of happiness i send my love to you.</p>    
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>08/2019</h2>
+      <img src="src/images/l.jpeg" alt="" style="width:70%"/>
+      <p>A birthday is the most special day in one’s life. Enjoy it to the fullest. Happy Birthday Dear..</p>    
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
